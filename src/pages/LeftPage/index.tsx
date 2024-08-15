@@ -4,21 +4,24 @@ import { ModuleTitle } from '@/style/globalStyledSet';
 import TrafficSituation from './charts/TrafficSituation';
 import UserSituation from './charts/UserSituation';
 import { LeftPage, LeftTopBox, LeftBottomBox } from './style';
-import { leftPageDataType } from '@/api/mock/leftPageData'
-import { get } from '@/api/http'
-import { ResultEnum } from '@/enums/httpEnum'
-import {
-  leftPageDataApi,
-} from '@/api/mock/index'
+import leftPageData, { leftPageDataType } from '@/api/mock/leftPageData'
+// import { get } from '@/api/http'
+// import { ResultEnum } from '@/enums/httpEnum'
+// import {
+//   leftPageDataApi,
+// } from '@/api/mock/index'
 
 export const LeftPageIndex = () => {
   const [leftData, setLeftData] = useState<leftPageDataType | undefined>(undefined)
 
   const fetchData = async () => {
-    const res = await get(leftPageDataApi)
-    if (res.code === ResultEnum.SUCCESS) {
-      setLeftData(res.data)
-    }
+    // const res = await get(leftPageDataApi)
+    // if (res.code === ResultEnum.SUCCESS) {
+    //   setLeftData(res.data)
+    // }
+
+      setLeftData(leftPageData)
+
   }
 
   useEffect(() => {

@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { BorderBox13 } from '@jiaminghi/data-view-react'
 import { ModuleTitle } from '@/style/globalStyledSet'
-import { rightPageDataType } from '@/api/mock/rightPageData'
+import rightPageData, { rightPageDataType } from '@/api/mock/rightPageData'
 import { RightPage, RightTopBox, RightCenterBox, RightBottomBox } from './style'
-import { get } from '@/api/http'
-import { ResultEnum } from '@/enums/httpEnum'
-import { rightPageDataApi } from '@/api/mock/index'
+// import { get } from '@/api/http'
+// import { ResultEnum } from '@/enums/httpEnum'
+// import { rightPageDataApi } from '@/api/mock/index'
 import earthRotate from '@/assets/images/earth-rotate.gif'
 
 import BrowseCategories from './charts/BrowseCategories'
@@ -17,10 +17,11 @@ export const RightPageIndex = () => {
   const [rightData, setRightData] = useState<rightPageDataType | undefined>(undefined)
 
   const fetchData = async () => {
-    const res = await get(rightPageDataApi)
-    if (res.code === ResultEnum.SUCCESS) {
-      setRightData(res.data)
-    }
+    // const res = await get(rightPageDataApi)
+    // if (res.code === ResultEnum.SUCCESS) {
+    //   setRightData(res.data)
+    // }
+      setRightData(rightPageData)
   }
 
   useEffect(() => {
