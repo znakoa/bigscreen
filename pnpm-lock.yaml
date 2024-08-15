@@ -17,9 +17,6 @@ importers:
       '@types/mockjs':
         specifier: ^1.0.10
         version: 1.0.10
-      '@types/node':
-        specifier: ^22.3.0
-        version: 22.3.0
       axios:
         specifier: ^1.7.2
         version: 1.7.2
@@ -1826,6 +1823,7 @@ snapshots:
   '@types/node@22.3.0':
     dependencies:
       undici-types: 6.18.2
+    optional: true
 
   '@types/prop-types@15.7.12': {}
 
@@ -2639,7 +2637,8 @@ snapshots:
 
   typescript@5.4.5: {}
 
-  undici-types@6.18.2: {}
+  undici-types@6.18.2:
+    optional: true
 
   unpipe@1.0.0: {}
 
