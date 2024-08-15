@@ -2,7 +2,7 @@ import { IndexPage } from '../pages/IndexPage'
 
 const routes = [
   {
-    path: 'bigscreen/',
+    path: '/',
     element: IndexPage()
   },
   {
